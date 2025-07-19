@@ -1,4 +1,4 @@
-# Hack Iota Xi 2025 (may possibly be renamed in the future) 🚀
+# Spookathon
 
 Welcome to the official website repository for **Hack Iota Xi 2025**, a hackathon organized by our Computer Science Honor Society (Iota Xi) for Fall 2025.
 
