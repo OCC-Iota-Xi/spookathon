@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hack Iota Xi 2025",
-  description: "Hack Iota Xi 2025",
+  title: "Spookathon 2025",
+  description: "Spookathon 2025",
 };
 
 export default function RootLayout({
