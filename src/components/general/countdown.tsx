@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react'
 
 interface CountdownProps {
   targetDate: Date
-  className?: string
 }
 
-export function Countdown({ targetDate, className = "" }: CountdownProps) {
+export function Countdown({ targetDate }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -43,7 +42,7 @@ export function Countdown({ targetDate, className = "" }: CountdownProps) {
   }, [targetDate])
 
   return (
-    <div className={`flex flex-col items-center ${className}`}>
+    <div className={`flex flex-col items-center`}>
       <h2 className="text-lg font-medium text-zinc-300 mb-4">Hackathon Starts In</h2>
       <div className="flex space-x-4">
         <div className="flex flex-col items-center">

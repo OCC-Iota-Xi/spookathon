@@ -1,11 +1,8 @@
 "use client"
 
 import { Skull, Ghost, Brain, Heart, Bot, Zap } from "lucide-react"
-import { Creepster } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-
-const creepster = Creepster({ weight: "400", subsets: ["latin"] })
 
 type Track = {
   title: string

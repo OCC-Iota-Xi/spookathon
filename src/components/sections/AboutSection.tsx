@@ -75,7 +75,7 @@ export default function AboutSection() {
 
       <div className="flex flex-col items-center justify-center">
         <ArcTimeline data={data} />
-        <p className="text-zinc-300 text-center mt-[-2rem]">Click through the timeline to see what's happening when!</p>
+        <p className="text-zinc-300 text-center mt-[-2rem]">Click through the timeline to see what&apos;s happening when!</p>
       </div>
     </section>
   )

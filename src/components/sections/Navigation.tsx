@@ -3,6 +3,7 @@
 import { Ghost } from "lucide-react"
 import { Countdown } from "@/components/ui/countdown"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function Navigation() {
   const [showCountdown, setShowCountdown] = useState(false)
@@ -49,25 +50,25 @@ export default function Navigation() {
       </div>
 
       <div className="hidden md:flex flex-row items-center justify-end space-x-8">
-        <a href="#home" className="hover:text-zinc-100 transition-colors font-medium">
+        <Link href="#home" className="hover:text-zinc-100 transition-colors font-medium">
           Home
-        </a>
+        </Link>
 
-        <a href="#about" className="hover:text-zinc-100 transition-colors font-medium">
+        <Link href="#about" className="hover:text-zinc-100 transition-colors font-medium">
           About
-        </a>
+        </Link>
 
-        <a href="#tracks" className="hover:text-zinc-100 transition-colors font-medium">
+        <Link href="#tracks" className="hover:text-zinc-100 transition-colors font-medium">
           Tracks
-        </a>
+        </Link>
 
-        <a href="#faqs" className="hover:text-zinc-100 transition-colors font-medium">
+        <Link href="#faqs" className="hover:text-zinc-100 transition-colors font-medium">
           FAQs
-        </a>
+        </Link>
 
-        <a href="/" className="font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
+        <Link href="/" className="font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
           Register!
-        </a>
+        </Link>
       </div>
 
       {/* Mobile menu button */}
