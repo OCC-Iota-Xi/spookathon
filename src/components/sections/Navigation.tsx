@@ -1,7 +1,7 @@
 "use client"
 
 import { Ghost } from "lucide-react"
-import { Countdown } from "@/components/general/countdown"
+import { Countdown } from "@/components/ui/countdown"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
