@@ -1,7 +1,7 @@
 "use client"
 
 import { Ghost } from "lucide-react"
-import { Countdown } from "@/components/ui/countdown"
+import { Countdown } from "@/components/general/countdown"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
@@ -73,9 +73,9 @@ export default function Navigation() {
 
       {/* Mobile menu button */}
       <div className="md:hidden">
-        <a href="/" className="text-sm font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
+        <Link href="/" className="text-sm font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
           Register!
-        </a>
+        </Link>
       </div>
     </nav>
   )
