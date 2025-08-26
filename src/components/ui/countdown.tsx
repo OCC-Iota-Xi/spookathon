@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react'
 
 interface CountdownProps {
   targetDate: Date
-  className?: string
 }
 
-export function Countdown({ targetDate, className = "" }: CountdownProps) {
+export function Countdown({ targetDate }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
