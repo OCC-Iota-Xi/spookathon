@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react'
 
 interface CountdownProps {
   targetDate: Date
+  className?: string
 }
 
-export function Countdown({ targetDate }: CountdownProps) {
+export function Countdown({ targetDate, className = "" }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -42,31 +43,30 @@ export function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate])
 
   return (
-    <div className={`flex flex-col items-center`}>
-      <h2 className="text-lg font-medium text-zinc-300 mb-4">Hackathon Starts In</h2>
-      <div className="flex space-x-4">
-        <div className="flex flex-col items-center">
-          <div className="bg-zinc-900/50 rounded-lg p-4 min-w-[80px] text-center">
-            <div className="text-2xl font-bold text-white">{timeLeft.days}</div>
-            <div className="text-xs text-zinc-400">Days</div>
+    <div>
+      <div className="flex space-x-1">
+        <div className="flex flex-col items-center w-14">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w-full border border-zinc-800">
+            <div className="text-base font-medium text-white mb-1">{timeLeft.days}</div>
+            <div className="text-xs text-zinc-300">Days</div>
           </div>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="bg-zinc-900/50 rounded-lg p-4 min-w-[80px] text-center">
-            <div className="text-2xl font-bold text-white">{timeLeft.hours}</div>
-            <div className="text-xs text-zinc-400">Hours</div>
+        <div className="flex flex-col items-center w-14">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w-full border border-zinc-800">
+            <div className="text-base font-medium text-white mb-1">{timeLeft.hours}</div>
+            <div className="text-xs text-zinc-300">Hours</div>
           </div>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="bg-zinc-900/50 rounded-lg p-4 min-w-[80px] text-center">
-            <div className="text-2xl font-bold text-white">{timeLeft.minutes}</div>
-            <div className="text-xs text-zinc-400">Minutes</div>
+        <div className="flex flex-col items-center w-14">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w- border border-zinc-800">
+            <div className="text-base font-medium text-white mb-1">{timeLeft.minutes}</div>
+            <div className="text-xs text-zinc-300">Mins</div>
           </div>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="bg-zinc-900/50 rounded-lg p-4 min-w-[80px] text-center">
-            <div className="text-2xl font-bold text-white">{timeLeft.seconds}</div>
-            <div className="text-xs text-zinc-400">Seconds</div>
+        <div className="flex flex-col items-center w-14">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w-full border border-zinc-800">
+            <div className="text-base font-medium text-white mb-1">{timeLeft.seconds}</div>
+            <div className="text-xs text-zinc-300">Secs</div>
           </div>
         </div>
       </div>
