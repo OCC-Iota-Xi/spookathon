@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Skull, Ghost, Brain, Heart, Bot, Zap, Plus, Minus} from "lucide-react"
 import Link from "next/link"
 import { Creepster } from "next/font/google";
@@ -14,7 +15,6 @@ const creepster = Creepster({
 type Track = {
   title: string
   description: string
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
 export default function TracksSection() {
@@ -25,37 +25,31 @@ export default function TracksSection() {
       title: "Web Development",
       description:
         "Build responsive web apps using modern frameworks like React, Vue, or Angular",
-      Icon: Skull,
     },
     {
       title: "Mobile Development",
       description:
         "Create innovative iOS/Android apps with React Native, Flutter, or native stacks",
-      Icon: Ghost,
     },
     {
       title: "AI & Machine Learning",
       description:
         "Leverage AI/ML to solve complex problems with real-world impact",
-      Icon: Brain,
     },
     {
       title: "Health & Wellness",
       description:
         "Build solutions that promote health and well-being",
-      Icon: Heart,
     },
     {
       title: "Robotics",
       description:
         "Build a robot that can solve a problem",
-      Icon: Bot,
     },
     {
       title: "Math Honor Society Challenge",
       description:
         "Solve a problem with math and computer science",
-      Icon: Zap,
     },
   ]
 
@@ -65,9 +59,11 @@ export default function TracksSection() {
       className="relative min-h-screen bg-[#796961]"
     >
 
-      <img
+      <Image
         src="/assets/witch.svg"
         alt="Tracks"
+        width={1920}
+        height={600}
         className="w-full"
       />
 
@@ -76,7 +72,7 @@ export default function TracksSection() {
           <h1 className={`text-4xl md:text-6xl lg:text-8xl mb-4 text-white ${creepster.className}`}>Tracks</h1>
 
           <div className="mt-4 md:mt-8 space-y-2">
-            {tracks.map(({ title, description, Icon }, index) => (
+            {tracks.map(({ title, description }, index) => (
               <div 
                 key={title}
                 className="border-b border-white overflow-hidden"
