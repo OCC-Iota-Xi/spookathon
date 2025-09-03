@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Navigation from "../components/sections/Navigation"
 import HeroSection from "../components/sections/HeroSection"
 import AboutSection from "../components/sections/AboutSection"
@@ -15,9 +16,11 @@ export default function Home() {
       <main className="w-full">
         <HeroSection />
 
-        <img
+        <Image
           src="/assets/interstitial-1.svg"
           alt="Interstitial"
+          width={1920}
+          height={200}
           className="w-full bg-gradient-to-b from-[#796961] to-[#26221f]"
         />
 

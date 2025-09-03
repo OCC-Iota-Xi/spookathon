@@ -61,24 +61,24 @@ export const metadata: Metadata = {
     siteName: "Spookathon 2025",
     images: [
       {
-        url: "/og-image.png",
+        url: "/assets/og-image.png",
         width: 1200,
         height: 630,
         alt: "Spookathon 2025 - Halloween Hackathon at Orange Coast College",
       },
-      {
-        url: "/og-image-square.png",
-        width: 1200,
-        height: 1200,
-        alt: "Spookathon 2025 Logo",
-      },
+      // {
+      //   url: "/assets/og-image-square.png",
+      //   width: 1200,
+      //   height: 1200,
+      //   alt: "Spookathon 2025 Logo",
+      // },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Spookathon 2025 | Halloween Hackathon at Orange Coast College",
     description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 24-31. Open to all students - build innovative solutions, win prizes, and have fun coding!",
-    images: ["/twitter-image.png"],
+    images: ["/assets/og-image.png"],
     creator: "@OCC_IotaXi",
     site: "@OCC_IotaXi",
   },
@@ -156,6 +156,10 @@ export default function RootLayout({
         <link rel="image" href="/assets/og-image.png" />
         <link rel="og:image" href="/assets/og-image.png" />
         <link rel="manifest" href="/manifest.json" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body
         className={`${montserrat.variable} ${geistMono.variable} antialiased`}

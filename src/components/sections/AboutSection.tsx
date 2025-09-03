@@ -1,7 +1,6 @@
 "use client"
 
-import { Calendar, Users, Trophy, Ghost, School } from "lucide-react"
-import { ArcTimeline } from "../magicui/arc-timeline"
+import Image from "next/image"
 import { Creepster } from "next/font/google";
 
 const creepster = Creepster({
@@ -10,34 +9,15 @@ const creepster = Creepster({
 });
 
 export default function AboutSection() {
-  const data = [
-    {
-      time: "Aug-Sept. 2025",
-      steps: [
-        { icon: <span>📝</span>, content: "Applications open 8/26" },
-      ],
-    },
-    {
-      time: "Oct 2025",
-      steps: [
-        { icon: <span>📅</span>, content: "Applications close 10/10" },
-        { icon: <span>🎯</span>, content: "Decisions come out 10/17" },
-      ],
-    },
-    {
-      time: "Hackathon Starts",
-      steps: [
-        { icon: <span>🎃</span>, content: "Opening Ceremony" }
-      ],
-    }
-  ];
   
   return (
     <section id="about" className="relative min-h-screen bg-[#26221f] py-24">
 
-      <img
+      <Image
         src="/assets/forest.svg"
         alt="About"
+        width={1920}
+        height={400}
         className="w-full bg-[#26221f]"
       />
 
