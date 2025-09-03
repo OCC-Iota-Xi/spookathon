@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Skull, Ghost, Brain, Heart, Bot, Zap, Plus, Minus} from "lucide-react"
+import { Ghost, Plus, Minus} from "lucide-react"
 import Link from "next/link"
 import { Creepster } from "next/font/google";
 import { Button } from "@/components/ui/button"
