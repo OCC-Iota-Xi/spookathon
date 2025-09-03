@@ -1,8 +1,15 @@
 "use client"
 
-import { Skull, Ghost, Brain, Heart, Bot, Zap } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Skull, Ghost, Brain, Heart, Bot, Zap, Plus, Minus} from "lucide-react"
 import Link from "next/link"
+import { Creepster } from "next/font/google";
+import { Button } from "@/components/ui/button"
+import { useState } from "react"
+
+const creepster = Creepster({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 type Track = {
   title: string
@@ -11,6 +18,8 @@ type Track = {
 }
 
 export default function TracksSection() {
+  const [openTrack, setOpenTrack] = useState<number | null>(null)
+
   const tracks: Track[] = [
     {
       title: "Web Development",
@@ -53,53 +62,63 @@ export default function TracksSection() {
   return (
     <section
       id="tracks"
-      className="min-h-screen flex flex-col items-center justify-center px-6 bg-[#0d171a]"
+      className="relative min-h-screen bg-[#796961]"
     >
-      <h1 className="text-5xl mb-4 text-white">Tracks</h1>
 
-      <p className="font-light text-zinc-300 text-center max-w-2xl mb-12">
-        Choose your adventure!
-      </p>
+      <img
+        src="/assets/witch.svg"
+        alt="Tracks"
+        className="w-full"
+      />
 
-      <div className="grid w-full md:w-1/2 grid-cols-1 sm:grid-cols-3 gap-3">
-        {tracks.map(({ title, description, Icon }) => (
-          <article
-            key={title}
-            className="relative p-6 rounded-2xl border border-[#234252]"
-          >
-            {/* Content */}
-            <div className="space-y-4 h-32">
-              <h3 className="text-lg text-white">
-                {title}
-              </h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
-                {description}
-              </p>
-            </div>
+      <div className="absolute inset-0 flex items-center px-4 md:px-8 lg:px-16">
+        <div className="w-full lg:w-1/2 lg:ml-8 mt-24">
+          <h1 className={`text-4xl md:text-6xl lg:text-8xl mb-4 text-white ${creepster.className}`}>Tracks</h1>
 
-            {/* Icon illustration area */}
-            <div className="my-8 flex justify-center">
-              <div className="relative">
-                <Icon className="size-24" strokeWidth={0.5} color="#56a4cc" />
+          <div className="mt-4 md:mt-8 space-y-2">
+            {tracks.map(({ title, description, Icon }, index) => (
+              <div 
+                key={title}
+                className="border-b border-white overflow-hidden"
+              >
+                <button
+                  className="w-full py-2 md:py-3 text-left flex items-center justify-between hover:bg-white/10 transition-colors"
+                  onClick={() => setOpenTrack(openTrack === index ? null : index)}
+                >
+                  <h3 className="text-lg md:text-xl text-white font-medium">{title}</h3>
+                  {openTrack === index ? (
+                    <Minus className="size-5 md:size-6 text-white flex-shrink-0" strokeWidth={1.5} />
+                  ) : (
+                    <Plus className="size-5 md:size-6 text-white flex-shrink-0" strokeWidth={1.5} />
+                  )}
+                </button>
+                
+                <div className={`overflow-hidden transition-all duration-300 ${
+                  openTrack === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="px-2 pb-4">
+                    <p className="text-white/80 leading-relaxed text-sm md:text-base">{description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
-      </div>
+            ))}
+          </div>
 
-      <div className="mt-16 text-center">
-        <p className="text-lg text-zinc-300 mb-6">
-          Can&apos;t decide? <span className="text-white font-semibold">Mix and match tracks</span> to create something truly unique!
-        </p>
-        <Link href="/">
-          <Button
-            size="lg"
-            className="text-base p-6 bg-white text-black rounded-full"
-          >
-            Join the Adventure
-            <Ghost className="size-4 ml-2" />
-          </Button>
-        </Link>
+          <div className="mt-8 md:mt-16">
+            <p className="text-base md:text-lg mb-4 md:mb-6">
+              Can&apos;t decide? <span className="font-semibold">Mix and match tracks</span> to create something truly unique!
+            </p>
+            <Link href="https://form.jotform.com/251737472997070">
+              <Button
+                size="lg"
+                className="text-sm md:text-base p-4 md:p-6 bg-white text-black rounded-full"
+              >
+                Join the Adventure
+                <Ghost className="size-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
       
     </section>

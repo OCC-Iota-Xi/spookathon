@@ -1,0 +1,32 @@
+# robots.txt for Spookathon 2025
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://spookathon.org/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow search engines to crawl images
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /og-image.png
+Allow: /twitter-image.png
+Allow: /icon-*.png
+Allow: /apple-icon.png
+
+# Allow all major search engines
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block specific paths if needed (currently none)
+# Disallow: /admin/
+# Disallow: /private/

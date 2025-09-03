@@ -2,6 +2,12 @@
 
 import { Plus, Minus } from "lucide-react"
 import { useState } from "react"
+import { Creepster } from "next/font/google"
+
+const creepster = Creepster({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function FAQSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -30,40 +36,40 @@ export default function FAQSection() {
   ]
 
   return (
-    <section id="faqs" className="min-h-screen py-20 flex flex-col items-center justify-center px-8 bg-[#180f09]">
+    <section id="faqs" className="min-h-screen py-12 md:py-20 flex flex-col items-center justify-center px-4 md:px-8 bg-[#180f09]">
       <div className="max-w-4xl w-full">
-        <h1 className="text-4xl mb-4">
+        <h1 className={`text-4xl md:text-6xl lg:text-8xl mx-auto ${creepster.className} text-center`}>
           FAQs
         </h1>
         
-        <p className="text-zinc-300 mb-12">
+        <p className="text-base md:text-lg lg:text-xl mt-4 md:mt-6 lg:mt-8 mb-8 md:mb-12 text-center">
           Got questions? We&apos;ve got answers! Click on any question below to learn more about Spookathon.
         </p>
       </div>
 
-      <div className="max-w-4xl w-full space-y-4">
+      <div className="max-w-4xl w-full space-y-3 md:space-y-4">
         {faqs.map((faq, index) => (
           <div 
             key={index}
             className="backdrop-blur-sm border-b border-white overflow-hidden"
           >
             <button
-              className="w-full py-4 text-left flex items-center justify-between hover:bg-zinc-800/30 transition-colors"
+              className="w-full py-3 md:py-4 px-2 md:px-0 text-left flex items-center justify-between hover:bg-zinc-800/30 transition-colors"
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
             >
-              <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
+              <h3 className="text-base md:text-lg font-semibold text-white pr-4">{faq.question}</h3>
               {openFaq === index ? (
-                <Minus className="size-5 flex-shrink-0" />
+                <Minus className="size-4 md:size-5 flex-shrink-0" />
               ) : (
-                <Plus className="size-5 flex-shrink-0" />
+                <Plus className="size-4 md:size-5 flex-shrink-0" />
               )}
             </button>
             
             <div className={`overflow-hidden transition-all duration-300 ${
               openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}>
-              <div className="px-6 pb-4">
-                <p className="text-zinc-300 leading-relaxed">{faq.answer}</p>
+              <div className="px-2 md:px-6 pb-3 md:pb-4">
+                <p className="text-zinc-300 leading-relaxed text-sm md:text-base">{faq.answer}</p>
               </div>
             </div>
           </div>

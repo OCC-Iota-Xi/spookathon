@@ -18,35 +18,35 @@ export default function HeroSection() {
                 id="home" 
                 className="relative overflow-hidden"
                 style={{
-                    paddingTop: "10rem",
-                    minHeight: "calc(100vh - 3rem)",
-                    background: "radial-gradient(circle at center top,rgba(45, 55, 39, 1) 0%, rgba(27, 32, 37, 1) 40%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 100%)"
+                    background: 'linear-gradient(to bottom, #4a2545, #2d1b3d, #1a0d1a, #000000)',
+                    minHeight: '100vh'
                 }}
             >
-                {/* Vertically centered content */}
-                <div className="relative z-10 grid h-full grid-cols-1 lg:grid-cols-2 items-center px-8 lg:px-16">
-                    <div className="w-full text-center lg:text-left">
-                        <h2 className="mb-3 text-lg lg:text-xl font-medium">October 24 – 31</h2>
+                 <div className="absolute top-0 left-0 right-0 z-10 h-full items-center px-4 md:px-8 lg:px-16">
+                    <div className="w-full text-center lg:text-left mt-24">
+                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 24 – 31</h2>
 
                         <h1
-                            className={`text-4xl md:text-6xl lg:text-9xl leading-none mb-4 ${creepster.className}`}
+                            className={`text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 ${creepster.className}`}
                         >
                             Spookathon
                             <br />
                             2025
                         </h1>
-
-                        <Link href="/" className="mt-6 inline-block">
-                            <Button size="lg" className="text-base px-8 py-6 bg-white text-black rounded-full">
-                                Register
-                                <ArrowRight className="size-4 ml-2" />
-                            </Button>
-                        </Link>
                         
                         {/* Countdown directly under the title */}
-                        <div id="hero-countdown" className="mt-12">
-                            <p className="font-mono text-sm mb-2">Countdown to Spookathon</p>
-                            <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
+                        <div id="hero-countdown" className="flex flex-row items-center">
+                            <div className="me-12">
+                                <p className="font-mono text-sm mb-2">Countdown to Spookathon</p>
+                                <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
+                            </div>
+
+                            <Link href="https://form.jotform.com/251737472997070" className="mt-4 md:mt-6 inline-block">
+                                <Button size="lg" className="text-sm md:text-base px-6 md:px-8 py-4 md:py-6 bg-white text-black rounded-full">
+                                    Register
+                                    <ArrowRight className="size-3 md:size-4 ml-2" />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
@@ -54,18 +54,20 @@ export default function HeroSection() {
                     <div className="hidden lg:block" />
                 </div>
                 
-                <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center z-30">
-                    <p className="mb-2 text-sm text-zinc-300">Scroll down to learn more</p>
-                    <ArrowDown className="size-5" />
+                {/* Hero ground SVG */}
+                <div className="flex flex-col justify-end h-screen">
+                    <img
+                        src="/assets/hero-ground.svg"
+                        alt="Ground"
+                        className="w-full"
+                    />
                 </div>
 
-
-                {/* Pumpkin sits on top of the grass */}
-                <img
-                    src="https://static.vecteezy.com/system/resources/previews/011/569/987/non_2x/3d-pumpkin-halloween-free-free-png.png"
-                    alt="Pumpkin"
-                    className="absolute bottom-24 right-1/2 translate-x-1/2 lg:right-16 lg:translate-x-0 w-[38rem] max-w-[80vw] z-20 rock-animation pointer-events-none select-none"
-                />
+                
+                <div className="absolute bottom-4 md:bottom-8 left-0 right-0 flex flex-col items-center z-30">
+                    <p className="mb-2 text-xs md:text-sm text-zinc-300">Scroll down to learn more</p>
+                    <ArrowDown className="size-4 md:size-5" />
+                </div>
             </section>
 
             {/* <div 
@@ -84,8 +86,8 @@ export default function HeroSection() {
                 </div>
 
                 <div className="flex flex-row justify-end w-1/3">
-                    <a href="/" className="text-sm font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
-                    Register!
+                                        <a href="https://form.jotform.com/251737472997070" className="text-sm font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
+                        Register!
                     </a>
                 </div>
             </div> */}
