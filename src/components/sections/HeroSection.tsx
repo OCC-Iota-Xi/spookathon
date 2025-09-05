@@ -24,7 +24,7 @@ export default function HeroSection() {
             >
                  <div className="absolute top-0 left-0 right-0 z-10 h-full items-center px-4 md:px-8 lg:px-16">
                     <div className="w-full text-center lg:text-left mt-24">
-                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 24 – 31</h2>
+                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 24 – 25</h2>
 
                         <h1
                             className={`text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 ${creepster.className}`}
