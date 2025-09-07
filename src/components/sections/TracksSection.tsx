@@ -22,29 +22,29 @@ export default function TracksSection() {
 
   const tracks: Track[] = [
     {
-      title: "Web Development",
+      title: "Education",
       description:
-        "Build responsive web apps using modern frameworks like React, Vue, or Angular",
+        "Build tools that improve learning, access, and campus life",
     },
     {
-      title: "Mobile Development",
+      title: "Healthcare",
       description:
-        "Create innovative iOS/Android apps with React Native, Flutter, or native stacks",
+        "Create solutions that support wellness, access, and patient experience",
     },
     {
-      title: "AI & Machine Learning",
+      title: "Daily Life",
       description:
-        "Leverage AI/ML to solve complex problems with real-world impact",
+        "Simplify everyday tasks with smart, practical tools",
     },
     {
-      title: "Health & Wellness",
+      title: "Hardware / Robotics",
       description:
-        "Build solutions that promote health and well-being",
+        "Design devices, sensors, or robots to solve real problems",
     },
     {
-      title: "Robotics",
+      title: "AI",
       description:
-        "Build a robot that can solve a problem",
+        "Apply AI/ML to create intelligent, ethical, high-impact features",
     },
     {
       title: "Math Honor Society Challenge",
@@ -59,17 +59,19 @@ export default function TracksSection() {
       className="relative min-h-screen bg-[#796961]"
     >
 
-      <Image
-        src="/assets/witch.svg"
-        alt="Tracks"
-        width={1920}
-        height={600}
-        className="w-full"
-      />
+      <div className="relative w-full h-[100vh] md:h-auto">
+        <Image
+          src="/assets/witch.svg"
+          alt="Tracks"
+          width={1920}
+          height={600}
+          className="w-full h-full object-cover object-center md:h-auto md:object-contain"
+        />
+      </div>
 
       <div className="absolute inset-0 flex items-center px-4 md:px-8 lg:px-16">
-        <div className="w-full lg:w-1/2 lg:ml-8 mt-24">
-          <h1 className={`text-4xl md:text-6xl lg:text-8xl mb-4 text-white ${creepster.className}`}>Tracks</h1>
+        <div className="w-full lg:w-1/2 lg:ml-8 md:mt-24">
+          <h1 className={`text-5xl md:text-6xl lg:text-8xl mb-4 text-white ${creepster.className}`}>Tracks</h1>
 
           <div className="mt-4 md:mt-8 space-y-2">
             {tracks.map(({ title, description }, index) => (

@@ -27,7 +27,7 @@ export default function HeroSection() {
                         <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 24 – 25</h2>
 
                         <h1
-                            className={`text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 ${creepster.className}`}
+                            className={`text-7xl md:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 ${creepster.className}`}
                         >
                             Spookathon
                             <br />
@@ -35,8 +35,8 @@ export default function HeroSection() {
                         </h1>
                         
                         {/* Countdown directly under the title */}
-                        <div id="hero-countdown" className="flex flex-row items-center">
-                            <div className="me-12">
+                        <div id="hero-countdown" className="flex flex-col md:flex-row items-center">
+                            <div className="md:me-12">
                                 <p className="font-mono text-sm mb-2">Countdown to Spookathon</p>
                                 <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
                             </div>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                     <img
                         src="/assets/hero-ground.svg"
                         alt="Ground"
-                        className="w-full"
+                        className="w-full h-[50vh] object-cover object-bottom md:h-auto md:object-contain"
                     />
                 </div>
 
@@ -69,28 +69,6 @@ export default function HeroSection() {
                     <ArrowDown className="size-4 md:size-5" />
                 </div>
             </section>
-
-            {/* <div 
-                id="hero-interstitial"
-                className="w-full h-20 py-2 px-4 bg-black flex flex-row items-center justify-between"
-            >
-                <div className="w-1/3">
-                    <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
-                </div>
-
-                <div className="w-1/3 h-full flex flex-row items-center justify-center">
-                    <div className="flex flex-col items-center z-30 animate-bounce">
-                        <p className="mb-2 text-sm text-zinc-300">Scroll down to learn more</p>
-                        <ArrowDown className="size-5 text-orange-400" />
-                    </div>
-                </div>
-
-                <div className="flex flex-row justify-end w-1/3">
-                                        <a href="https://form.jotform.com/251737472997070" className="text-sm font-medium bg-zinc-100 hover:bg-zinc-100/70 transition-colors text-zinc-900 px-4 py-2 rounded-full">
-                        Register!
-                    </a>
-                </div>
-            </div> */}
         </>
     );
 }

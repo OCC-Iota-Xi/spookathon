@@ -66,12 +66,6 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Spookathon 2025 - Halloween Hackathon at Orange Coast College",
       },
-      // {
-      //   url: "/assets/og-image-square.png",
-      //   width: 1200,
-      //   height: 1200,
-      //   alt: "Spookathon 2025 Logo",
-      // },
     ],
   },
   twitter: {
