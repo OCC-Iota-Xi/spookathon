@@ -5,6 +5,7 @@ import { Creepster } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import { Countdown } from "@/components/ui/countdown";
 import Link from "next/link";
+import GetInvolvedButton from "@/components/general/GetInvolvedButton";
 
 const creepster = Creepster({
     weight: "400",
@@ -40,13 +41,17 @@ export default function HeroSection() {
                                 <p className="font-mono text-sm mb-2">Countdown to Spookathon</p>
                                 <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
                             </div>
+                        </div>
 
-                            <Link href="https://form.jotform.com/251737472997070" className="mt-4 md:mt-6 inline-block">
-                                <Button size="lg" className="text-sm md:text-base px-6 md:px-8 py-4 md:py-6 bg-white text-black rounded-full">
+                        <div className="flex flex-row items-center justify-center md:justify-start gap-4 mt-4 md:mt-6 mx-auto">
+                            <Link href="https://form.jotform.com/251737472997070" className="inline-block">
+                                <Button size="lg" className="text-base px-6 md:px-8 py-4 md:py-6 rounded-full">
                                     Register
                                     <ArrowRight className="size-3 md:size-4 ml-2" />
                                 </Button>
                             </Link>
+
+                            <GetInvolvedButton />
                         </div>
                     </div>
 
