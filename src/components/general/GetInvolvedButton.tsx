@@ -12,17 +12,7 @@ import {
 } from "@/components/ui/dialog"
 import Link from "next/link"
 
-interface GetInvolvedButtonProps {
-  variant?: "default" | "secondary" | "outline" | "ghost" | "link" | "destructive"
-  size?: "default" | "sm" | "lg" | "icon"
-  className?: string
-}
-
-export default function GetInvolvedButton({
-  variant = "secondary",
-  size = "default",
-  className = ""
-}: GetInvolvedButtonProps) {
+export default function GetInvolvedButton() {
   return (
     <Dialog>
       <DialogTrigger className="flex items-center justify-center font-medium transition-colors px-4 h-12 rounded-full bg-zinc-800 hover:bg-zinc-800/70 text-white cursor-pointer">
