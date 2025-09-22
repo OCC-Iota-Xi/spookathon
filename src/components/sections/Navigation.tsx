@@ -53,7 +53,7 @@ export default function Navigation() {
           }`}>
             {showCountdown && (
               <div className="text-xs">
-                <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
+                <Countdown targetDate={new Date("2025-10-25T09:00:00")} />
               </div>
             )}
           </div>

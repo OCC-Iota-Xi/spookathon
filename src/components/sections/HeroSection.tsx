@@ -25,7 +25,7 @@ export default function HeroSection() {
             >
                  <div className="absolute top-0 left-0 right-0 z-10 h-full items-center px-4 md:px-8 lg:px-16">
                     <div className="w-full text-center lg:text-left mt-24">
-                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 24 – 25</h2>
+                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 25 – 26</h2>
 
                         <h1
                             className={`text-7xl md:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 ${creepster.className}`}
@@ -39,7 +39,7 @@ export default function HeroSection() {
                         <div id="hero-countdown" className="flex flex-col md:flex-row items-center">
                             <div className="md:me-12">
                                 <p className="font-mono text-sm mb-2">Countdown to Spookathon</p>
-                                <Countdown targetDate={new Date("2025-10-24T09:00:00")} />
+                                <Countdown targetDate={new Date("2025-10-25T09:00:00")} />
                             </div>
                         </div>
 

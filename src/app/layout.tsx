@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Spookathon 2025 | Halloween Hackathon at Orange Coast College",
     template: "%s | Spookathon 2025"
   },
-  description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 24-31. Open to all students - build innovative solutions, win prizes, and have fun coding with the dead... I mean, with your team!",
+  description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 25-26. Open to all students - build innovative solutions, win prizes, and have fun coding with the dead... I mean, with your team!",
   keywords: [
     "hackathon",
     "Orange Coast College",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://spookathon.org",
     title: "Spookathon 2025 | Halloween Hackathon at Orange Coast College",
-    description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 24-31. Open to all students - build innovative solutions, win prizes, and have fun coding!",
+    description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 25-26. Open to all students - build innovative solutions, win prizes, and have fun coding!",
     siteName: "Spookathon 2025",
     images: [
       {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Spookathon 2025 | Halloween Hackathon at Orange Coast College",
-    description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 24-31. Open to all students - build innovative solutions, win prizes, and have fun coding!",
+    description: "Join Spookathon 2025: A spooky 48-hour hackathon at Orange Coast College, Oct 25-26. Open to all students - build innovative solutions, win prizes, and have fun coding!",
     images: ["/assets/og-image.png"],
     creator: "@OCC_IotaXi",
     site: "@OCC_IotaXi",
@@ -103,8 +103,8 @@ export default function RootLayout({
     "image": [
       "https://spookathon.org/assets/og-image.png"
     ],
-    "startDate": "2025-10-24T09:00:00-07:00",
-    "endDate": "2025-10-31T21:00:00-07:00",
+    "startDate": "2025-10-25T09:00:00-07:00",
+    "endDate": "2025-10-26T21:00:00-07:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
