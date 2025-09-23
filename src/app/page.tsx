@@ -7,8 +7,8 @@ import AboutSection from "../components/sections/AboutSection"
 import TracksSection from "../components/sections/TracksSection"
 import FAQSection from "../components/sections/FAQSection"
 import Footer from "../components/sections/Footer"
-import OrganizersSection from "@/components/sections/OrganizersSection"
-import TestimonialsSection from "@/components/sections/TestimonialsSection"
+// import OrganizersSection from "@/components/sections/OrganizersSection"
+// import TestimonialsSection from "@/components/sections/TestimonialsSection"
 
 export default function Home() {
   return (
