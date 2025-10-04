@@ -1,7 +1,7 @@
 "use client"
 
-import { Clock, Calendar, Users, Coffee, Code, Trophy, Ghost } from "lucide-react"
 import { Creepster } from "next/font/google";
+import { useState } from "react";
 
 const creepster = Creepster({
   weight: "400",
@@ -12,7 +12,6 @@ type ScheduleEvent = {
   time: string
   title: string
   description: string
-  icon: React.ReactNode
   duration: string
   type: 'workshop' | 'activity' | 'meal' | 'ceremony' | 'hacking' | 'other'
 }
@@ -24,16 +23,16 @@ type DaySchedule = {
 }
 
 export default function ScheduleSection() {
+  const [activeDay, setActiveDay] = useState(0) // 0 for Day 1, 1 for Day 2
   const scheduleData: DaySchedule[] = [
     {
-      day: "Saturday",
+      day: "Day 1",
       date: "October 25, 2025",
       events: [
         {
           time: "8:00 AM",
           title: "Contestants Arrive",
           description: "Check in all participants at Reception",
-          icon: <Users className="size-6 text-orange-400" />,
           duration: "1 hour",
           type: 'other'
         },
@@ -41,7 +40,6 @@ export default function ScheduleSection() {
           time: "9:00 AM",
           title: "Opening Ceremony",
           description: "Welcome to Spookathon! Meet the organizers and get ready for the coding adventure ahead!",
-          icon: <Ghost className="size-6 text-purple-400" />,
           duration: "30 min",
           type: 'ceremony'
         },
@@ -49,7 +47,6 @@ export default function ScheduleSection() {
           time: "9:30 AM",
           title: "Ceremony Close & Hacking Start",
           description: "Announce breakfast and team formation. The spooky coding begins!",
-          icon: <Code className="size-6 text-red-400" />,
           duration: "30 min",
           type: 'hacking'
         },
@@ -57,7 +54,6 @@ export default function ScheduleSection() {
           time: "10:00 AM",
           title: "Team Formation Event",
           description: "Find your coding companions! Mix and match with other hackers to form the perfect spooky squad.",
-          icon: <Users className="size-6 text-green-400" />,
           duration: "30 min",
           type: 'other'
         },
@@ -65,7 +61,6 @@ export default function ScheduleSection() {
           time: "11:00 AM",
           title: "Workshop 1: Idea Formation",
           description: "Learn how to brainstorm and develop your hackathon project ideas effectively.",
-          icon: <Calendar className="size-6 text-blue-400" />,
           duration: "30 min",
           type: 'workshop'
         },
@@ -73,7 +68,6 @@ export default function ScheduleSection() {
           time: "12:30 PM",
           title: "Lunch",
           description: "Fuel up with some delicious food to keep your coding energy high!",
-          icon: <Coffee className="size-6 text-yellow-400" />,
           duration: "30 min",
           type: 'meal'
         },
@@ -81,7 +75,6 @@ export default function ScheduleSection() {
           time: "2:00 PM",
           title: "Workshop 2: How to Collaborate on GitHub",
           description: "Master version control and team collaboration using GitHub for your projects.",
-          icon: <Code className="size-6 text-indigo-400" />,
           duration: "1 hour",
           type: 'workshop'
         },
@@ -89,7 +82,6 @@ export default function ScheduleSection() {
           time: "4:00 PM",
           title: "Activity 1: Type Racer Competition",
           description: "Test your typing skills in this fun competition! Fastest fingers win spooky prizes.",
-          icon: <Trophy className="size-6 text-yellow-500" />,
           duration: "1 hour",
           type: 'activity'
         },
@@ -97,7 +89,6 @@ export default function ScheduleSection() {
           time: "6:00 PM",
           title: "Workshop 3: Intro to UI/UX",
           description: "Learn the basics of user interface and user experience design for your projects.",
-          icon: <Calendar className="size-6 text-pink-400" />,
           duration: "30 min",
           type: 'workshop'
         },
@@ -105,7 +96,6 @@ export default function ScheduleSection() {
           time: "7:00 PM",
           title: "Dinner",
           description: "Enjoy a delicious dinner with your fellow hackers and recharge for the evening.",
-          icon: <Coffee className="size-6 text-orange-500" />,
           duration: "1 hour",
           type: 'meal'
         },
@@ -113,29 +103,26 @@ export default function ScheduleSection() {
           time: "7:30 PM",
           title: "Activity 2: Ping-pong Championship",
           description: "Take a break from coding and compete in our ping-pong tournament!",
-          icon: <Trophy className="size-6 text-green-500" />,
           duration: "1 hour",
           type: 'activity'
         },
         {
           time: "9:30 PM",
-          title: "Close",
+          title: "End of Day 1",
           description: "End of Day 1! Get some rest and come back tomorrow for more hacking fun.",
-          icon: <Clock className="size-6 text-gray-400" />,
           duration: "30 min",
           type: 'other'
         }
       ]
     },
     {
-      day: "Sunday",
+      day: "Day 2",
       date: "October 26, 2025",
       events: [
         {
           time: "9:00 AM",
           title: "Breakfast",
           description: "Start your day with a hearty breakfast to fuel your final coding push!",
-          icon: <Coffee className="size-6 text-yellow-400" />,
           duration: "30 min",
           type: 'meal'
         },
@@ -143,7 +130,6 @@ export default function ScheduleSection() {
           time: "10:00 AM",
           title: "Workshop 4: Pitching Your Ideas",
           description: "Learn how to effectively present and pitch your project to judges and peers.",
-          icon: <Calendar className="size-6 text-purple-400" />,
           duration: "1 hour",
           type: 'workshop'
         },
@@ -151,7 +137,6 @@ export default function ScheduleSection() {
           time: "12:00 PM",
           title: "Lunch",
           description: "Final meal before the big push! Make sure you&apos;re energized for presentations.",
-          icon: <Coffee className="size-6 text-orange-400" />,
           duration: "1 hour",
           type: 'meal'
         },
@@ -159,15 +144,13 @@ export default function ScheduleSection() {
           time: "2:30 PM",
           title: "Submissions Due (Soft Deadline)",
           description: "First deadline for project submissions. Make sure your project is ready!",
-          icon: <Clock className="size-6 text-yellow-500" />,
           duration: "30 min",
           type: 'other'
         },
         {
           time: "3:00 PM",
           title: "Hacking Ends (Hard Deadline)",
-          description: "Time&apos;s up! Final deadline for all project submissions.",
-          icon: <Code className="size-6 text-red-400" />,
+          description: "Time's up! Final deadline for all project submissions.",
           duration: "30 min",
           type: 'hacking'
         },
@@ -175,7 +158,6 @@ export default function ScheduleSection() {
           time: "3:00 PM",
           title: "Break for Hackers",
           description: "Take a well-deserved break while judges review your amazing projects.",
-          icon: <Coffee className="size-6 text-blue-400" />,
           duration: "30 min",
           type: 'other'
         },
@@ -183,7 +165,6 @@ export default function ScheduleSection() {
           time: "3:30 PM",
           title: "Judging Time",
           description: "Judges review all submitted projects and select the winners.",
-          icon: <Trophy className="size-6 text-gold-400" />,
           duration: "1 hour",
           type: 'other'
         },
@@ -191,7 +172,6 @@ export default function ScheduleSection() {
           time: "5:00 PM",
           title: "Closing Ceremony & Awards",
           description: "The moment of truth! Winners will be announced and prizes awarded.",
-          icon: <Trophy className="size-6 text-yellow-500" />,
           duration: "45 min",
           type: 'ceremony'
         }
@@ -232,45 +212,52 @@ export default function ScheduleSection() {
 
       <div className="relative max-w mx-auto px-4 md:px-8 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className={`text-5xl md:text-6xl lg:text-8xl mb-6 text-white ${creepster.className}`}>
+        <div className="text-center mb-10">
+          <h1 className={`text-5xl md:text-6xl lg:text-8xl mb-2 text-white ${creepster.className}`}>
             Schedule
           </h1>
-          <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto">
-            A two-day hackathon full of coding, creativity, and spooky fun! Here&apos;s what to expect during your hackathon adventure.
-          </p>
         </div>
 
         {/* Schedule Blocks */}
-        <div className="w-[90%] mx-auto grid lg:grid-cols-2 gap-2">
-          {scheduleData.map((daySchedule, dayIndex) => (
-            <div key={dayIndex} className="bg-[#3a2f2a] rounded-lg border p-5">
-              {/* Day Header */}
-              <div className="text-center mb-2">
-                <h2 className={`text-3xl md:text-4xl text-white ${creepster.className}`}>
-                  {daySchedule.day}
-                </h2>
-                <p className="text-lg text-zinc-400 mt-2">{daySchedule.date}</p>
-              </div>
+        <div className="space-y-8">
+          {/* Day Selection Buttons */}
+          <div className="flex justify-center gap-4 mb-12">
+            {scheduleData.map((daySchedule, dayIndex) => (
+              <button
+                key={dayIndex}
+                onClick={() => setActiveDay(dayIndex)}
+                className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
+                  activeDay === dayIndex
+                    ? 'bg-orange-400 text-black'
+                    : 'bg-[#3a2f2a] text-white border border-zinc-700 hover:border-zinc-600'
+                }`}
+              >
+                {daySchedule.day}
+              </button>
+            ))}
+          </div>
 
+          <div className="space-y-8">
               {/* Schedule Events */}
-              <div className="w-full mx-auto space-y-1">
-                {daySchedule.events.map((event, eventIndex) => (
-                  <div key={eventIndex} className="bg-[#2a1f1a] h-35 rounded-lg p-4 border">
-                    <div className="flex items-center gap-3 mb-3">
-                      {event.icon}
-                      <span className="text-orange-400 font-semibold text-lg">{event.time}</span>
-                      <span className="text-zinc-400 text-sm">({event.duration})</span>
+              <div className="space-y-3">
+                {scheduleData[activeDay].events.map((event, eventIndex) => (
+                  <div key={eventIndex} className="flex items-center gap-4 bg-[#3a2f2a]/40 backdrop-blur-sm rounded-lg p-4 border border-zinc-700/30">
+                    <div className="flex-shrink-0 w-20 text-orange-400 font-semibold text-sm">
+                      {event.time}
                     </div>
-                    
-                    <h3 className="text-lg font-bold text-white mb-2">{event.title}</h3>
-                    <p className="text-zinc-300 text-sm leading-relaxed">{event.description}</p>
+                    <div className="flex-1">
+                      <h3 className="text-white font-medium text-base">{event.title}</h3>
+                    </div>
+                    <div className="flex-shrink-0 text-zinc-500 text-sm">
+                      {event.duration}
+                    </div>
                   </div>
                 ))}
               </div>
-            </div>
-          ))}
+          </div>
         </div>
+
+    
       </div>
 
       {/* Custom Shape Divider Bottom */}

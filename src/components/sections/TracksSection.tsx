@@ -23,48 +23,45 @@ export default function TracksSection() {
   const tracks: Track[] = [
     {
       title: "Education",
-      description: `📚 Transform boring textbooks into interactive haunted adventures! Build apps that gamify learning
-       with spooky themes 🎃, create study tools with zombie challenges 🧟, develop campus navigation systems with ghostly 
-       guides 👻, or design VR educational experiences that transport students to different historical periods 🏰. Make 
-       learning fun and spooky! ✨`,
+      description: `Build apps that gamify learning with spooky themes 🎃. Create study tools with zombie challenges 🧟, 
+      develop campus navigation systems with ghostly guides 👻, or design VR educational experiences that transport 
+      students to different historical periods 🏰. Make learning fun and spooky! ✨`,
     },
     {
       title: "Healthcare",
-      description: `🏥 Become a digital healing wizard! Create mental health apps with calming Halloween themes 🎃, 
-        build telemedicine platforms that connect patients with doctors like summoning spirits 🔮, develop medication 
-        reminder systems with spooky alarms 👻, design accessibility tools that help patients navigate healthcare systems 
-        ♿, or craft wellness tracking apps with supernatural motivation systems 💪. Health and wellness systems now rests 
-        on your whimsical wizardry! ✨`,
+      description: `Create mental health tools with calming Halloween themes 🎃. Build telemedicine platforms that connect 
+      patients with doctors like summoning spirits 🔮, develop medication reminder systems with spooky alarms 👻, design 
+      accessibility tools that help patients navigate healthcare systems ♿, or craft wellness tracking apps with 
+      supernatural motivation systems 💪. Health and wellness systems now rests on your whimsical wizardry! ✨`,
     },
     {
       title: "Daily Life",
-      description: `🏠 Banish boring everyday tasks with supernatural convenience! Build smart home automation systems 
-        controlled by haunted voice assistants 🗣️, create meal planning apps with ghostly chef recommendations 👨‍🍳, develop 
-        time management tools with spooky productivity reminders ⏰, design personal finance trackers with mystical budget 
-        insights 💰, or craft social platforms that help people connect in magical ways 🤝.`,
+      description: `Build smart home automation systems controlled by haunted voice assistants 🗣️, create meal planning 
+      apps with ghostly chef recommendations 👨‍🍳, develop time management tools with spooky productivity reminders ⏰, 
+      design personal finance trackers with mystical budget insights 💰, or craft social platforms that help people 
+      connect in magical ways 🤝.`,
     },
     {
       title: "Hardware / Robotics",
-      description: `🤖 Bring inanimate objects to life with tech magic! Build Halloween-themed IoT sensors that monitor 
-        air quality or noise levels 🌪️, create robotic assistants that help with household chores (think Roomba dressed as 
-        a ghost 👻), design Arduino projects for automatic lighting systems 💡, develop wearable devices that track health 
-        metrics with spooky visualizations 📊, or craft smart garden systems that make plants grow better through haunted automation 🌱.`,
+      description: `Build Halloween-themed IoT sensors that monitor air quality or noise levels 🌪️, create robotic assistants 
+      that help with household chores (think Roomba dressed as a ghost 👻), design Arduino projects for automatic lighting 
+      systems 💡, develop wearable devices that track health metrics with spooky visualizations 📊, or craft smart garden 
+      systems that make plants grow better through haunted automation 🌱.`,
     },
     {
       title: "AI",
-      description: `🧠 Channel the dark arts of artificial intelligence! Create chatbots that help users with Halloween costume 
-        recommendations using image recognition 🎭, build natural language processing tools that analyze spooky literature 📖, 
-        develop recommendation systems for horror movies or haunted attractions 🎬, craft computer vision projects that detect 
-        Halloween decorations 🦇, or design AI assistants that help users learn tech skills through interactive ghostly tutorials 👨‍💻.`,
+      description: `Create any projects with spooky use of AI. Help users with Halloween costume recommendations using image 
+      recognition 🎭, build natural language processing tools that analyze spooky literature 📖, develop recommendation systems 
+      for horror movies or haunted attractions 🎬, craft computer vision projects that detect Halloween decorations 🦇, 
+      or design AI assistants that help users learn tech skills through interactive ghostly tutorials 👨‍💻.`,
     },
     {
       title: "Math Honor Society Challenge",
-      description: `🧮 Face the ultimate coding terror: create a math educational app! Design interactive learning platforms 
-        that make mathematics engaging and spooktacular. Build apps that teach algebra through zombie survival games 🧟, create 
-        geometry tools with haunted shapes and mysterious angles 📐, develop calculus visualizations with supernatural waves and 
-        ghostly derivatives ⚡, craft statistics dashboards that reveal spooky patterns in data 📈, or design problem-solving 
-        games where players must use math to escape haunted dungeons 🏰. Transform "scary" math into exciting adventures that 
-        students will love! ✨`,
+      description: `Create a math educational app! Design interactive learning platforms that make mathematics engaging and 
+      spooktacular. Build apps that teach algebra through zombie survival games 🧟, create geometry tools with haunted shapes 
+      and mysterious angles 📐, develop calculus visualizations with supernatural waves and ghostly derivatives ⚡, 
+      craft statistics dashboards that reveal spooky patterns in data 📈, or design problem-solving games where players must use 
+      math to escape haunted dungeons 🏰.`,
     },
   ]
 
