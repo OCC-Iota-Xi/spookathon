@@ -7,6 +7,7 @@ import AboutSection from "../components/sections/AboutSection"
 import TracksSection from "../components/sections/TracksSection"
 import FAQSection from "../components/sections/FAQSection"
 import Footer from "../components/sections/Footer"
+import ScheduleSection from "@/components/sections/ScheduleSection"
 // import OrganizersSection from "@/components/sections/OrganizersSection"
 // import TestimonialsSection from "@/components/sections/TestimonialsSection"
 
@@ -70,11 +71,15 @@ export default function Home() {
           <div className="absolute bottom-5 md:bottom-10 left-[85%] w-3 md:w-5 h-2 md:h-3 bg-[#1a0f08] rounded-full transform -rotate-45"></div>
         </div>
         
+        <ScheduleSection />
+
         <FAQSection />
 
         {/* Organizer Section Boilerplate (remove if we don't want to use it)  */}
         {/* <OrganizersSection /> */}
 
+        {/* Schedule Section */}
+        
         {/* Testimonial Boilerplate (remove if we don't want to use it)  */}
         {/* <TestimonialsSection />  */}
 
