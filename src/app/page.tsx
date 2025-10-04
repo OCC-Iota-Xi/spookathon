@@ -78,8 +78,6 @@ export default function Home() {
         {/* Organizer Section Boilerplate (remove if we don't want to use it)  */}
         {/* <OrganizersSection /> */}
 
-        {/* Schedule Section */}
-        
         {/* Testimonial Boilerplate (remove if we don't want to use it)  */}
         {/* <TestimonialsSection />  */}
 

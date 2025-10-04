@@ -72,6 +72,10 @@ export default function Navigation() {
             Tracks
           </Link>
 
+          <Link href="#schedule" className="hover:text-zinc-100 transition-colors font-medium">
+            Schedule
+          </Link>
+
           <Link href="#faqs" className="hover:text-zinc-100 transition-colors font-medium">
             FAQs
           </Link>
