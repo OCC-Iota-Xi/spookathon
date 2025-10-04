@@ -1,7 +1,6 @@
 "use client"
 
-import Image from "next/image"
-import { Clock, Calendar, MapPin, Users, Coffee, Code, Trophy, Ghost } from "lucide-react"
+import { Clock, Calendar, Users, Coffee, Code, Trophy, Ghost } from "lucide-react"
 import { Creepster } from "next/font/google";
 
 const creepster = Creepster({
@@ -151,7 +150,7 @@ export default function ScheduleSection() {
         {
           time: "12:00 PM",
           title: "Lunch",
-          description: "Final meal before the big push! Make sure you're energized for presentations.",
+          description: "Final meal before the big push! Make sure you&apos;re energized for presentations.",
           icon: <Coffee className="size-6 text-orange-400" />,
           duration: "1 hour",
           type: 'meal'
@@ -167,7 +166,7 @@ export default function ScheduleSection() {
         {
           time: "3:00 PM",
           title: "Hacking Ends (Hard Deadline)",
-          description: "Time's up! Final deadline for all project submissions.",
+          description: "Time&apos;s up! Final deadline for all project submissions.",
           icon: <Code className="size-6 text-red-400" />,
           duration: "30 min",
           type: 'hacking'
@@ -238,7 +237,7 @@ export default function ScheduleSection() {
             Schedule
           </h1>
           <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto">
-            A two-day hackathon full of coding, creativity, and spooky fun! Here's what to expect during your hackathon adventure.
+            A two-day hackathon full of coding, creativity, and spooky fun! Here&apos;s what to expect during your hackathon adventure.
           </p>
         </div>
 
