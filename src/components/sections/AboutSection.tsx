@@ -28,6 +28,8 @@ export default function AboutSection() {
             <p className="text-base md:text-xl lg:text-2xl mt-2 md:mt-6 lg:mt-8 text-zinc-200 text-center w-full md:w-4/5 lg:w-3/4">
               Spookathon is a Halloween-inspired hackathon hosted by the Iota Xi Honor Society at Orange Coast College. 
               Open to <span className="font-semibold text-white">students of all experience levels across any major</span>, participants will work in small teams to <span className="font-semibold text-white">build creative, tech-driven solutions to real-world problems.</span>
+              <br /> <br />Not sure where to start? 
+              <br />We have <span className="font-semibold text-white">beginner project templates</span> for you to get spooky on!
             </p>
           </div>
         </div>
