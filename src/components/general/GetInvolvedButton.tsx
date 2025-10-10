@@ -35,7 +35,7 @@ export default function GetInvolvedButton() {
 
         <Link href="https://form.jotform.com/252387810463157" className="inline-block w-full">
           <Button size="lg" className="text-sm md:text-base px-6 md:px-8 py-4 md:py-6 rounded-full w-full">
-            Become a Mentor
+            Become a Mentor/Judge
             <ArrowRight className="size-3 md:size-4 ml-2" />
           </Button>
         </Link>
