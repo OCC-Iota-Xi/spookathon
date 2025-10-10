@@ -123,13 +123,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
 html, body {
   scroll-behavior: smooth;
-  background: black;
+  background: linear-gradient(180deg, #0b090a 0%, #120c0f 35%, #000 100%);
 }
 
 @keyframes rock {

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { CalendarDays, MapPin, Users2, Trophy, UtensilsCrossed, Briefcase, Info, DoorOpen, Award } from "lucide-react"
+import { Users2, Trophy, UtensilsCrossed, Briefcase, Info } from "lucide-react"
 import { Creepster } from "next/font/google"
 
 const creepster = Creepster({

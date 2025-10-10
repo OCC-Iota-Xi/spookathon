@@ -1,8 +1,6 @@
 "use client"
 
 import { Creepster } from "next/font/google"
-import { Github, Linkedin } from "lucide-react"
-import Link from "next/link"
 
 const creepster = Creepster({
   weight: "400",

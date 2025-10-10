@@ -49,7 +49,7 @@ export default function TracksSection() {
       systems that make plants grow better through haunted automation 🌱.`,
     },
     {
-      title: "AI",
+      title: "Artificial Intelligence",
       description: `Create any projects with spooky use of AI. Help users with Halloween costume recommendations using image 
       recognition 🎭, build natural language processing tools that analyze spooky literature 📖, develop recommendation systems 
       for horror movies or haunted attractions 🎬, craft computer vision projects that detect Halloween decorations 🦇, 

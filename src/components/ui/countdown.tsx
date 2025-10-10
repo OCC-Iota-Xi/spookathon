@@ -42,30 +42,30 @@ export function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate])
 
   return (
-    <div>
-      <div className="flex space-x-1">
-        <div className="flex flex-col items-center w-14">
-          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w-full border border-zinc-800">
-            <div className="text-base font-medium text-white mb-1">{timeLeft.days}</div>
-            <div className="text-xs text-zinc-300">Days</div>
+    <div aria-label="Event countdown" role="timer">
+      <div className="flex space-x-1 md:space-x-2">
+        <div className="flex flex-col items-center w-14 md:w-16">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-2 w-full border border-zinc-800 shadow-[0_0_20px_rgba(255,255,255,0.04)]">
+            <div className="text-base font-semibold text-white mb-0.5 md:mb-1">{timeLeft.days}</div>
+            <div className="text-[10px] md:text-xs text-zinc-300 uppercase tracking-wide">Days</div>
           </div>
         </div>
-        <div className="flex flex-col items-center w-14">
-          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w-full border border-zinc-800">
-            <div className="text-base font-medium text-white mb-1">{timeLeft.hours}</div>
-            <div className="text-xs text-zinc-300">Hours</div>
+        <div className="flex flex-col items-center w-14 md:w-16">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-2 w-full border border-zinc-800 shadow-[0_0_20px_rgba(255,255,255,0.04)]">
+            <div className="text-base font-semibold text-white mb-0.5 md:mb-1">{timeLeft.hours}</div>
+            <div className="text-[10px] md:text-xs text-zinc-300 uppercase tracking-wide">Hours</div>
           </div>
         </div>
-        <div className="flex flex-col items-center w-14">
-          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w- border border-zinc-800">
-            <div className="text-base font-medium text-white mb-1">{timeLeft.minutes}</div>
-            <div className="text-xs text-zinc-300">Mins</div>
+        <div className="flex flex-col items-center w-14 md:w-16">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-2 w-full border border-zinc-800 shadow-[0_0_20px_rgba(255,255,255,0.04)]">
+            <div className="text-base font-semibold text-white mb-0.5 md:mb-1">{timeLeft.minutes}</div>
+            <div className="text-[10px] md:text-xs text-zinc-300 uppercase tracking-wide">Mins</div>
           </div>
         </div>
-        <div className="flex flex-col items-center w-14">
-          <div className="bg-zinc-900/50 rounded-lg text-center p-3 w-full border border-zinc-800">
-            <div className="text-base font-medium text-white mb-1">{timeLeft.seconds}</div>
-            <div className="text-xs text-zinc-300">Secs</div>
+        <div className="flex flex-col items-center w-14 md:w-16">
+          <div className="bg-zinc-900/50 rounded-lg text-center p-2 w-full border border-zinc-800 shadow-[0_0_20px_rgba(255,255,255,0.04)]">
+            <div className="text-base font-semibold text-white mb-0.5 md:mb-1">{timeLeft.seconds}</div>
+            <div className="text-[10px] md:text-xs text-zinc-300 uppercase tracking-wide">Secs</div>
           </div>
         </div>
       </div>

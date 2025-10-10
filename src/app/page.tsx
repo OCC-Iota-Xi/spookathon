@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import Navigation from "../components/sections/Navigation"
+import Navigation from "../components/general/Navigation"
 import HeroSection from "../components/sections/HeroSection"
 import AboutSection from "../components/sections/AboutSection"
 import TracksSection from "../components/sections/TracksSection"
@@ -9,6 +9,7 @@ import FAQSection from "../components/sections/FAQSection"
 // import EventDetailsSection from "../components/sections/EventDetailsSection"
 import Footer from "../components/sections/Footer"
 import ScheduleSection from "@/components/sections/ScheduleSection"
+import StatsInterstitial from "@/components/sections/StatsInterstitial"
 // import OrganizersSection from "@/components/sections/OrganizersSection"
 // import TestimonialsSection from "@/components/sections/TestimonialsSection"
 
@@ -20,12 +21,24 @@ export default function Home() {
       <main className="w-full">
         <HeroSection />
 
+        <div className="w-full pt-20 bg-[#796961]">
+          <Image
+            src="/assets/interstitial-1.svg"
+            alt="Interstitial"
+            width={1920}
+            height={200}
+            className="w-full bg-gradient-to-b from-[#796961] to-[#463E39]"
+          />
+        </div>
+
+        <StatsInterstitial />
+
         <Image
-          src="/assets/interstitial-1.svg"
+          src="/assets/interstitial-2.svg"
           alt="Interstitial"
           width={1920}
           height={200}
-          className="w-full bg-gradient-to-b from-[#796961] to-[#26221f]"
+          className="w-full bg-gradient-to-b from-[#796961] to-[#463E39]"
         />
 
         <AboutSection />

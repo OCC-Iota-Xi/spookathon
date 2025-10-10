@@ -15,8 +15,9 @@ import Link from "next/link"
 export default function GetInvolvedButton() {
   return (
     <Dialog>
-      <DialogTrigger className="flex items-center justify-center font-medium transition-colors px-4 h-12 rounded-full bg-zinc-800 hover:bg-zinc-800/70 text-white cursor-pointer">
+      <DialogTrigger className="flex items-center justify-center font-medium transition-all px-4 h-12 rounded-full bg-zinc-800 hover:bg-zinc-800/80 text-white cursor-pointer hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40">
         Get Involved
+        <ArrowRight className="size-3 md:size-4 ml-2" />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
