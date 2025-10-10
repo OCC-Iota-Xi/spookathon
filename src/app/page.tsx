@@ -6,6 +6,7 @@ import HeroSection from "../components/sections/HeroSection"
 import AboutSection from "../components/sections/AboutSection"
 import TracksSection from "../components/sections/TracksSection"
 import FAQSection from "../components/sections/FAQSection"
+// import EventDetailsSection from "../components/sections/EventDetailsSection"
 import Footer from "../components/sections/Footer"
 import ScheduleSection from "@/components/sections/ScheduleSection"
 // import OrganizersSection from "@/components/sections/OrganizersSection"
@@ -28,6 +29,8 @@ export default function Home() {
         />
 
         <AboutSection />
+
+        {/* <EventDetailsSection /> */}
 
         <TracksSection />
 

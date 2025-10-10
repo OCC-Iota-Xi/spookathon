@@ -20,38 +20,43 @@ export default function HeroSection() {
                 className="relative overflow-hidden"
                 style={{
                     background: 'linear-gradient(to bottom, #4a2545, #2d1b3d, #1a0d1a, #000000)',
-                    minHeight: '100vh'
+                    minHeight: '110vh'
                 }}
             >
                  <div className="absolute top-0 left-0 right-0 z-10 h-full items-center px-4 md:px-8 lg:px-16">
-                    <div className="w-full text-center lg:text-left mt-24">
-                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-xl font-medium">October 25 – 26</h2>
+                    <div className="w-full text-center lg:text-left mt-28">
+                        <h2 className="mb-2 md:mb-3 text-base md:text-lg lg:text-2xl font-medium">October 25 – 26</h2>
 
                         <h1
-                            className={`text-7xl md:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 ${creepster.className}`}
+                            className={`text-7xl md:text-8xl xl:text-[9.5rem] leading-none mb-4 md:mb-6 ${creepster.className}`}
                         >
                             Spookathon
-                            <br />
-                            2025
+
                         </h1>
-                        
-                        {/* Countdown directly under the title */}
-                        <div id="hero-countdown" className="flex flex-col md:flex-row items-center">
-                            <div className="md:me-12">
-                                <p className="font-mono text-sm mb-2">Countdown to Spookathon</p>
-                                <Countdown targetDate={new Date("2025-10-25T09:00:00")} />
+                        <p className="max-w-2xl mx-auto lg:mx-0 text-sm md:text-base text-zinc-200/90">
+                            A Halloween-inspired hackathon at OCC where small teams build creative, tech-driven solutions —
+                            websites, mobile apps, AI projects, and even physical hardware. No team? We’ll match you up.
+                            Open to all majors and experience levels.
+                        </p>
+
+                        <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 mt-8 md:mt-12 mx-auto">
+                            <div id="hero-countdown" className="flex flex-col md:flex-row items-center">
+                                <div className="md:me-12">
+                                    <p className="font-mono mb-2 font-medium">Register by <span className="font-bold text-white">Oct. 17 at 11:59pm</span></p>
+                                    <Countdown targetDate={new Date("2025-10-25T09:00:00")} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="flex flex-row items-center justify-center md:justify-start gap-4 mt-4 md:mt-6 mx-auto">
-                            <Link href="https://form.jotform.com/251737472997070" className="inline-block">
-                                <Button size="lg" className="text-base px-6 md:px-8 py-4 md:py-6 rounded-full">
-                                    Register
-                                    <ArrowRight className="size-3 md:size-4 ml-2" />
-                                </Button>
-                            </Link>
+                            <div className="flex flex-row items-center justify-center md:justify-start gap-4">
+                                <Link href="https://form.jotform.com/251737472997070" className="inline-block">
+                                    <Button size="lg" className="text-base px-6 md:px-8 py-4 md:py-6 rounded-full">
+                                        Register
+                                        <ArrowRight className="size-3 md:size-4 ml-2" />
+                                    </Button>
+                                </Link>
 
-                            <GetInvolvedButton />
+                                <GetInvolvedButton />
+                            </div>
                         </div>
                     </div>
 
@@ -60,7 +65,7 @@ export default function HeroSection() {
                 </div>
                 
                 {/* Hero ground SVG */}
-                <div className="flex flex-col justify-end h-screen">
+                <div className="absolute bottom-0 left-0 right-0 z-0">
                     <img
                         src="/assets/hero-ground.svg"
                         alt="Ground"
