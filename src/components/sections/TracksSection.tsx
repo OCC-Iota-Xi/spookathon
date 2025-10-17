@@ -118,7 +118,7 @@ export default function TracksSection() {
             <p className="text-base md:text-lg mb-4 md:mb-6">
               Can&apos;t decide? <span className="font-semibold">Mix and match tracks</span> to create something truly unique!
             </p>
-            <Link href="https://form.jotform.com/251737472997070">
+            <Link href="https://form.jotform.com/252888339331163">
               <Button
                 size="lg"
                 className="text-sm md:text-base p-4 md:p-6 bg-white text-black rounded-full"

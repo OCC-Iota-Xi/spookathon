@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-end px-4 md:px-8 overflow-hidden pb-2">
       <div className="relative z-10 max-w-3xl w-full flex flex-col items-center text-center">
-        <Link href="https://form.jotform.com/251737472997070" className="mt-8 md:mt-12">
+        <Link href="https://form.jotform.com/252888339331163" className="mt-8 md:mt-12">
           <Button
             size="lg"
             className="text-sm md:text-base p-4 md:p-6 bg-white text-black rounded-full"

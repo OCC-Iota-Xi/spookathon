@@ -47,7 +47,7 @@ export default function HeroSection() {
                             </span>
 
                             <div className="flex flex-row items-center justify-center md:justify-start gap-4 ms-0 md:ms-12">
-                                <Link href="https://form.jotform.com/251737472997070" className="inline-block">
+                                <Link href="https://form.jotform.com/252888339331163" className="inline-block">
                                     <Button size="lg" className="text-base px-6 md:px-8 py-4 md:py-6 rounded-full">
                                         Register
                                         <ArrowRight className="size-3 md:size-4 ml-2" />

@@ -114,7 +114,7 @@ export default function Navigation() {
 
             <div className="flex items-center space-x-3">
               <Link 
-                href="https://form.jotform.com/251737472997070" 
+                href="https://form.jotform.com/252888339331163" 
                 className="flex items-center justify-center font-medium transition-all px-4 h-10 rounded-full bg-zinc-100 hover:bg-zinc-100/80 text-zinc-900 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40"
               >
                 Register
@@ -129,7 +129,7 @@ export default function Navigation() {
             showMobileButtons ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
           }`}>
             <GetInvolvedButton />
-            <Link href="https://form.jotform.com/251737472997070" className="flex items-center justify-center font-medium transition-all px-3 h-11 rounded-full bg-zinc-100 hover:bg-zinc-100/80 text-zinc-900 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40">
+            <Link href="https://form.jotform.com/252888339331163" className="flex items-center justify-center font-medium transition-all px-3 h-11 rounded-full bg-zinc-100 hover:bg-zinc-100/80 text-zinc-900 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40">
               Register!
             </Link>
           </div>

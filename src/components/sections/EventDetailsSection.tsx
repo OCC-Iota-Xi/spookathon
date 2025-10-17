@@ -103,7 +103,7 @@ export default function EventDetailsSection() {
               body={
                 <>
                   Sign up, show up, and ship something spooky. {" "}
-                  <Link href="https://form.jotform.com/251737472997070" className="underline font-medium text-white">Register here</Link>.
+                  <Link href="https://form.jotform.com/252888339331163" className="underline font-medium text-white">Register here</Link>.
                 </>
               }
             />
