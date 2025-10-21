@@ -66,7 +66,7 @@ export default function Navigation() {
                   </div>
                   <div className="flex items-center space-x-5 ms-5">
                     <Link 
-                      href="https://discord.gg/XDpjaNPv" 
+                      href="https://discord.gg/P9aYmYaJfe" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40 rounded-sm"
